@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icons Effect</title>
+</head>
+<style>
+    .container {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .owt_fb {
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+        border-radius: 50%;
+        margin: 30px;
+    }
+    
+    .owt_fb i {
+        font-size: 50px;
+        color: black;
+    }
+    
+    .owt_fb::after {
+        content: "Facebook";
+        color: rgb(35, 35, 196);
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+        visibility: hidden;
+        left: -20%;
+    }
+    
+    .owt_fb:hover::after {
+        position: relative;
+        visibility: visible;
+        transition: 0.6s;
+    }
+    
+    .owt_fb:hover {
+        box-shadow: 0px 0px 2px 3px rgb(35, 35, 196);
+        transform: scale(1.2);
+        transition: 0.6s;
+        border-color: white;
+    }
+    
+    .owt_fb i:hover {
+        color: rgb(35, 35, 196);
+    }
+    
+    .owt_twitter {
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+        border-radius: 50%;
+        margin: 30px;
+    }
+    
+    .owt_twitter i {
+        font-size: 43px;
+        transform: translate(5px, 5px);
+        color: black;
+    }
+    
+    .owt_twitter::after {
+        content: "Twitter";
+        color: cornflowerblue;
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+        visibility: hidden;
+        left: -15%;
+        top: 7px;
+    }
+    
+    .owt_twitter:hover::after {
+        position: relative;
+        visibility: visible;
+        transition: 0.6s;
+    }
+    
+    .owt_twitter:hover {
+        box-shadow: 0px 0px 2px 3px cornflowerblue;
+        transform: scale(1.2);
+        transition: 0.6s;
+        border-color: white;
+    }
+    
+    .owt_twitter i:hover {
+        color: cornflowerblue;
+    }
+    
+    .owt_insta {
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+        border-radius: 50%;
+        margin: 30px;
+    }
+    
+    .owt_insta i {
+        font-size: 47px;
+        transform: translate(4px, 1.3px);
+        color: black
+    }
+    
+    .owt_insta::after {
+        content: "Instagram";
+        color: red;
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+        visibility: hidden;
+        left: -15px;
+    }
+    
+    .owt_insta:hover::after {
+        position: relative;
+        visibility: visible;
+        transition: 0.6s;
+    }
+    
+    .owt_insta:hover {
+        box-shadow: 0px 0px 2px 3px red;
+        transform: scale(1.2);
+        transition: 0.6s;
+        border-color: white;
+    }
+    
+    .owt_insta i:hover {
+        color: red;
+    }
+    
+    .owt_linkedin {
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+        border-radius: 50%;
+        margin: 30px;
+    }
+    
+    .owt_linkedin i {
+        font-size: 42px;
+        color: black;
+        transform: translate(7px, 5px);
+    }
+    
+    .owt_linkedin::after {
+        content: "Linkedin";
+        color: rgb(240, 188, 45);
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+        visibility: hidden;
+        left: -10px;
+        top: 10px;
+    }
+    
+    .owt_linkedin:hover::after {
+        position: relative;
+        visibility: visible;
+        transition: 0.6s;
+    }
+    
+    .owt_linkedin:hover {
+        box-shadow: 0px 0px 2px 3px rgb(240, 188, 45);
+        transform: scale(1.2);
+        transition: 0.6s;
+        border-color: white;
+    }
+    
+    .owt_linkedin i:hover {
+        color: rgb(240, 188, 45);
+    }
+    
+    .owt_youtube {
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+        border-radius: 50%;
+        margin: 30px;
+    }
+    
+    .owt_youtube i {
+        font-size: 40px;
+        color: black;
+        transform: translate(3px, 5px);
+    }
+    
+    .owt_youtube::after {
+        content: "YouTube";
+        color: rgb(236, 55, 55);
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+        visibility: hidden;
+        left: -10px;
+        top: 10px;
+    }
+    
+    .owt_youtube:hover::after {
+        position: relative;
+        visibility: visible;
+        transition: 0.6s;
+    }
+    
+    .owt_youtube:hover {
+        box-shadow: 0px 0px 2px 3px rgb(236, 55, 55);
+        transform: scale(1.2);
+        transition: 0.6s;
+        border-color: white;
+    }
+    
+    .owt_youtube i:hover {
+        color: rgb(236, 55, 55);
+    }
+    
+    @media screen and (max-width:576px) {
+        .container {
+            width: 100%;
+            flex-direction: column;
+        }
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+<body>
+    <div class="container">
+        <div class="owt_fb">
+            <i class="fab fa-facebook"></i>
+
+        </div>
+        <div class="owt_twitter">
+            <i class="fab fa-twitter"></i>
+        </div>
+        <div class="owt_insta">
+            <i class="fab fa-instagram"></i>
+        </div>
+        <div class="owt_linkedin">
+            <i class="fab fa-linkedin-in"></i>
+        </div>
+        <div class="owt_youtube">
+            <i class="fab fa-youtube"></i>
+        </div>
+    </div>
+</body>
+
+</html>
